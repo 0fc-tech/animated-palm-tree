@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/mod2boucles" />
+            <option value="$PROJECT_DIR$/mod2conditions" />
+            <option value="$PROJECT_DIR$/mod2fonctions" />
+            <option value="$PROJECT_DIR$/mod2heritageinterface" />
+            <option value="$PROJECT_DIR$/mod2structureclasse" />
+            <option value="$PROJECT_DIR$/mod2variables" />
+            <option value="$PROJECT_DIR$/mod3compose" />
+            <option value="$PROJECT_DIR$/mod3lazycolumn" />
+            <option value="$PROJECT_DIR$/mod3uixml" />
+            <option value="$PROJECT_DIR$/mod4gestioninteraction" />
+            <option value="$PROJECT_DIR$/mod4stateflowvm" />
+          </set>
+        </option>
+        <option name="resolveExternalAnnotations" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

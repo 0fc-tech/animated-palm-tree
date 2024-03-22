@@ -21,6 +21,9 @@
             <option value="$PROJECT_DIR$/mod3uixml" />
             <option value="$PROJECT_DIR$/mod4gestioninteraction" />
             <option value="$PROJECT_DIR$/mod4stateflowvm" />
+            <option value="$PROJECT_DIR$/mod5activites" />
+            <option value="$PROJECT_DIR$/mod5nav" />
+            <option value="$PROJECT_DIR$/mod5unittest" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

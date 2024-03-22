@@ -23,6 +23,18 @@
       <entry key="mod4stateflowvm">
         <State />
       </entry>
+      <entry key="mod5activites">
+        <State />
+      </entry>
+      <entry key="mod5nav">
+        <State />
+      </entry>
+      <entry key="mod5unittest">
+        <State />
+      </entry>
+      <entry key="show()">
+        <State />
+      </entry>
     </value>
   </component>
 </project>

@@ -32,6 +32,12 @@
       <entry key="mod5unittest">
         <State />
       </entry>
+      <entry key="mod6datastore">
+        <State />
+      </entry>
+      <entry key="mod6sqlite">
+        <State />
+      </entry>
       <entry key="show()">
         <State />
       </entry>

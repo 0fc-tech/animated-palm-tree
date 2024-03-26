@@ -13,7 +13,7 @@ fun demarrageVehicule(): Boolean {
 }
 
 fun LocalDateTime.showDateTimeInFrench(): String {
-    //Création format conversionde date pour
+    //Création format conversion de date pour
     val formatter = DateTimeFormatter.ofPattern(
         "'le' d MMMM 'à' HH'h'mm", Locale.FRENCH)
     // Formatage du LocalDateTime avec le format donnée

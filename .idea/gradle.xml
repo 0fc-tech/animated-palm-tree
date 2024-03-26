@@ -24,6 +24,8 @@
             <option value="$PROJECT_DIR$/mod5activites" />
             <option value="$PROJECT_DIR$/mod5nav" />
             <option value="$PROJECT_DIR$/mod5unittest" />
+            <option value="$PROJECT_DIR$/mod6datastore" />
+            <option value="$PROJECT_DIR$/mod6sqlite" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

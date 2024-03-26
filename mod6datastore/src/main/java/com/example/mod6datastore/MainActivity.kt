@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -18,7 +19,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.focus.onFocusChanged
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.mod6datastore.SettingsViewModel.Companion.Factory
 import com.example.mod6datastore.ui.theme.DemonstrationsTheme
@@ -42,19 +42,19 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun SettingsPage(vm : SettingsViewModel = viewModel(factory = Factory)){
-    val primaryColorState by vm.primaryColor.collectAsState(initial = "Blue")
-    var stateTextFieldPrimColor by remember {
-        mutableStateOf(primaryColorState ?: "")
-    }
+    val primaryColorState by vm.primaryColorStateFlow.collectAsState()
+    var stateTextFieldPrimColor by remember { mutableStateOf( primaryColorState ?: "") }
+    stateTextFieldPrimColor = primaryColorState ?:""
 
     Scaffold {innerPadding->
         Column(Modifier.padding(innerPadding)) {
             TextField(
                 value = stateTextFieldPrimColor,
-                onValueChange = { stateTextFieldPrimColor = it },
-                Modifier.onFocusChanged {
-                    vm.savePrimaryColor(stateTextFieldPrimColor)
-                })
+                onValueChange = { stateTextFieldPrimColor = it },)
+            OutlinedButton(onClick = {
+                vm.savePrimaryColor(stateTextFieldPrimColor) }) {
+                Text("Valider")
+            }
             TextField(value = "", onValueChange ={} )
             Text("La couleur primaire est $primaryColorState")
         }

@@ -4,12 +4,17 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.CreationExtras
-import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
 class SettingsViewModel(
     val repository: UserPreferencesRepository) : ViewModel() {
-    val primaryColor : Flow<String?> = repository.primaryColor
+    val primaryColorStateFlow = repository.primaryColor.stateIn(
+        viewModelScope,
+        SharingStarted.Eagerly,
+        null
+    )
 
     fun savePrimaryColor(color: String) {
         viewModelScope.launch {

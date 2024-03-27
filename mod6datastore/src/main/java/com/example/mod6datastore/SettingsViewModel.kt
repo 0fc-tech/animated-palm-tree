@@ -11,10 +11,7 @@ import kotlinx.coroutines.launch
 class SettingsViewModel(
     val repository: UserPreferencesRepository) : ViewModel() {
     val primaryColorStateFlow = repository.primaryColor.stateIn(
-        viewModelScope,
-        SharingStarted.Eagerly,
-        null
-    )
+        viewModelScope, SharingStarted.Eagerly, null)
 
     fun savePrimaryColor(color: String) {
         viewModelScope.launch {

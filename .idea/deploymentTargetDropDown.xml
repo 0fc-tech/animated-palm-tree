@@ -35,6 +35,9 @@
       <entry key="mod6datastore">
         <State />
       </entry>
+      <entry key="mod6room">
+        <State />
+      </entry>
       <entry key="mod6sqlite">
         <State />
       </entry>

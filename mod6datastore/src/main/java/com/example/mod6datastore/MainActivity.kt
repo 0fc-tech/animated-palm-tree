@@ -3,11 +3,14 @@ package com.example.mod6datastore
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -42,21 +45,27 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun SettingsPage(vm : SettingsViewModel = viewModel(factory = Factory)){
-    val primaryColorState by vm.primaryColorStateFlow.collectAsState()
-    var stateTextFieldPrimColor by remember { mutableStateOf( primaryColorState ?: "") }
-    stateTextFieldPrimColor = primaryColorState ?:""
+    val primColorDataStore by vm.primaryColorStateFlow.collectAsState()
+    var primColorUi by remember { mutableStateOf( primColorDataStore ?: "") }
+    primColorUi = primColorDataStore ?:""
 
     Scaffold {innerPadding->
         Column(Modifier.padding(innerPadding)) {
             TextField(
-                value = stateTextFieldPrimColor,
-                onValueChange = { stateTextFieldPrimColor = it },)
-            OutlinedButton(onClick = {
-                vm.savePrimaryColor(stateTextFieldPrimColor) }) {
-                Text("Valider")
-            }
+                value = primColorUi,
+                onValueChange = { primColorUi = it },
+                trailingIcon = {
+                    IconButton(onClick = {
+                        vm.savePrimaryColor(primColorUi) }) {
+                        Image(
+                            imageVector=Icons.Default.Check,
+                            contentDescription=null
+                        )
+                    }
+                })
+
             TextField(value = "", onValueChange ={} )
-            Text("La couleur primaire est $primaryColorState")
+            Text("La couleur primaire est $primColorDataStore")
         }
     }
 

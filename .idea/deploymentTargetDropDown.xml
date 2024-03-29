@@ -5,6 +5,9 @@
       <entry key="app">
         <State />
       </entry>
+      <entry key="mod2callbac">
+        <State />
+      </entry>
       <entry key="mod3compose">
         <State />
       </entry>
@@ -39,6 +42,12 @@
         <State />
       </entry>
       <entry key="mod6sqlite">
+        <State />
+      </entry>
+      <entry key="mod7retrofit">
+        <State />
+      </entry>
+      <entry key="mod8workmanager">
         <State />
       </entry>
       <entry key="show()">

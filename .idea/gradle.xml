@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/mod2boucles" />
+            <option value="$PROJECT_DIR$/mod2callbac" />
             <option value="$PROJECT_DIR$/mod2conditions" />
             <option value="$PROJECT_DIR$/mod2fonctions" />
             <option value="$PROJECT_DIR$/mod2heritageinterface" />
@@ -27,6 +28,8 @@
             <option value="$PROJECT_DIR$/mod6datastore" />
             <option value="$PROJECT_DIR$/mod6room" />
             <option value="$PROJECT_DIR$/mod6sqlite" />
+            <option value="$PROJECT_DIR$/mod7retrofit" />
+            <option value="$PROJECT_DIR$/mod8workmanager" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
